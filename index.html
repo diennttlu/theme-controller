@@ -50,23 +50,23 @@
 
         song.autoplay = true;
         song.loop = true;
-        if (song.paused) {
-            song.play();
-            icon.src = "icons/pause.png";
-        } else {
-            song.pause();
-            icon.src = "icons/play.png";
-        }
+        // if (song.paused) {
+        //     song.play();
+        //     icon.src = "icons/pause.png";
+        // } else {
+        //     song.pause();
+        //     icon.src = "icons/play.png";
+        // }
 
-        // icon.onclick = function () {
-        //     if (song.paused) {
-        //         song.play();
-        //         icon.src = "icons/pause.png";
-        //     } else {
-        //         song.pause();
-        //         icon.src = "icons/play.png";
-        //     }
-        // };
+        icon.onclick = function () {
+            if (song.paused) {
+                song.play();
+                icon.src = "icons/pause.png";
+            } else {
+                song.pause();
+                icon.src = "icons/play.png";
+            }
+        };
 
         audioName.onclick = function () {
             if (isShowControl) {
