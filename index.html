@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thùyy Dung</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="icons/play.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="sign">
+        <span class="fast-flicker">T</span>HÙ<span class="flicker">YY&nbsp;</span>dun<span class="flicker">g</span>
+    </div>
+    <div class="audio-form">
+        <span id="audioName" class="audio-name">Time-SynCole.mp3</span>
+        <img id="icon" class="icon-audio" src="icons/pause.png" alt="">
+    </div>
+    <audio id="song" class="song" controls loop>
+        <source src="media/song.mp3" type="audio/mp3">
+    </audio>
+    <!-- <div class="heart"></div> -->
+    <div class="slider-frame">
+        <div class="slide-images">
+            <div class="img-container">
+                <img src="image/image_1.jpg">
+            </div>
+            <div class="img-container">
+                <img src="image/image_2.jpg">
+            </div>
+            <div class="img-container">
+                <img src="image/image_3.jpg">
+            </div>
+            <div class="img-container">
+                <img src="image/image_4.jpg">
+            </div>
+            <div class="img-container">
+                <img src="image/image_5.jpg">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var song = document.getElementById("song");
+        var icon = document.getElementById("icon");
+        var audioName = document.getElementById("audioName");
+        var isShowControl = false;
+
+        song.autoplay = true;
+        song.loop = true;
+        if (song.paused) {
+            song.play();
+            icon.src = "icons/pause.png";
+        } else {
+            song.pause();
+            icon.src = "icons/play.png";
+        }
+
+        // icon.onclick = function () {
+        //     if (song.paused) {
+        //         song.play();
+        //         icon.src = "icons/pause.png";
+        //     } else {
+        //         song.pause();
+        //         icon.src = "icons/play.png";
+        //     }
+        // };
+
+        audioName.onclick = function () {
+            if (isShowControl) {
+                song.style.display = 'block';
+            } else {
+                song.style.display = 'none';
+            }
+            isShowControl = !isShowControl;
+        };
+
+    </script>
+</body>
+
+</html>
