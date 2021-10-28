@@ -16,7 +16,7 @@
     </div>
     <div class="audio-form">
         <span id="audioName" class="audio-name">Time-SynCole.mp3</span>
-        <img id="icon" class="icon-audio" src="icons/pause.png" alt="">
+        <img id="icon" class="icon-audio" src="icons/play.png" alt="">
     </div>
     <audio id="song" class="song" controls loop>
         <source src="media/song.mp3" type="audio/mp3">
@@ -41,30 +41,20 @@
             </div>
         </div>
     </div>
-
+    
     <script>
         var song = document.getElementById("song");
         var icon = document.getElementById("icon");
         var audioName = document.getElementById("audioName");
         var isShowControl = false;
 
-        song.autoplay = true;
-        song.loop = true;
-        // if (song.paused) {
-        //     song.play();
-        //     icon.src = "icons/pause.png";
-        // } else {
-        //     song.pause();
-        //     icon.src = "icons/play.png";
-        // }
-
         icon.onclick = function () {
             if (song.paused) {
-                song.play();
                 icon.src = "icons/pause.png";
+                song.play();
             } else {
-                song.pause();
                 icon.src = "icons/play.png";
+                song.pause();  
             }
         };
 
